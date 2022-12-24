@@ -150,7 +150,7 @@ import { orm, Action, Pet, User } from "./config";
     // conclusion
     // no problems with the SELECT_IN (at least from my testing)
 
-    // JOINED in the first example seems to ignore populateWhere, expected behavior?
+    // JOINED in the second example seems to ignore populateWhere, expected behavior?
     // but if it is expected, then why does populateWhere kinda work when using limit (4 example) ?
 
     // shouldn't the resulting users and their pets be the same no matter which LoadStrategy you use
