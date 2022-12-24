@@ -20,12 +20,16 @@ import { orm, Action, Pet, User } from "./config";
             for (let i = 0; i < 10; i++) {
                 const action = new Action("name - " + Math.random().toString());
                 pet.Action = Reference.create(action);
+                em.persist(action);
             }
+
+            em.persist(pet);
         }
 
         em.persist(user);
     }
 
+    await em.flush();
     em.clear();
 
     // 1 - simple working query (em.find)
